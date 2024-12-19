@@ -1,0 +1,126 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: verdana,
+    
+     
+    }
+    body{
+      background-color:brown;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .close{
+        display: none;
+    }
+    #homepage{
+      
+      
+  justify-content: center;
+  margin-top: 10px;
+  
+    }
+    #homepage .card{
+      width : 320px;
+      height:400px;
+      background-color: peru;
+      text-align: center;
+      margin-inline: 25px;
+      margin-top: 24px;
+    }
+    .card img{
+      width: 100%;
+      border-radius: 7px;
+      display: block;
+    }
+    #searchResults{
+      
+      
+
+      justify-content: center;
+       margin-top: 10px;
+       
+    }
+
+    #searchResults .detail-buttonn{
+      cursor: pointer;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: burlywood;
+
+      
+    }
+   
+    #searchResults .cardd{
+      width : 320px;
+      height:400px;
+      background-color: peru;
+      text-align: center;
+      margin-inline: 25px;
+      margin-top: 60px;
+      
+      
+      
+    }
+    
+    .cardd img{
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+    }
+    #details-page{
+      justify-content: space-around;
+        margin-top: 30px;
+        padding-left: 20px;
+        
+        
+        
+       }
+       .close-detail-page{
+        background-color: red;
+        border: solid beige;
+        border-radius: 1px;
+        width: 40px;
+        height:40px ;
+        position: absolute;
+        
+       }
+       .link {
+        cursor: pointer;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: burlywood;
+    }
+    
+      
+    
+    #search-input{
+      width: 220px;
+      height: 50px;
+      padding-left: 5px;
+
+    }
+    .goTosearch{
+      cursor: pointer;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: burlywood;
+
+    }
+    .generate{
+      cursor: pointer;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 10px;
+      background-color: burlywood;
+
+    }
+    

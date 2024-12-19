@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="index.css">
+    <title>Meal App</title>
+    
+</head>
+<body>
+    
+    <section id="homepage">
+
+        <div class = "recepi-container">
+
+        <h1>Welcome to the Meal finder site</h1>
+        <p>Find delicious Meal here!</p>
+        <button type="button" class ="goTosearch" onclick="showSearchResults()">Go to Search</button>
+        <button type = "button " ><span class="generate" id="start">click to generate</span>
+        </div> 
+    </section> 
+        
+    
+      <section id="details-page">
+        <div class = "search-container"></div>
+        <button type ="button"class = "close-detail-page" onclick="showHomepage()">close</button>
+        <br>
+        <br>
+        <div class ="meal-details"></div>
+        
+        
+        <div class = "recipe-details-content"></div>
+        </div>
+      </section>
+
+        <section id="searchResults" class="close">
+       
+       <h1>Search Meal</h1>
+       <input type ="text" placeholder ="Find meal items" id ="search-input">
+       <button type = "submit " ><span class="link" id="search-link">click to search</span> 
+        <button type ="button"class = "close-detail-page" onclick="showHomepage()">close</button>
+          
+      </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
