@@ -7,7 +7,8 @@ const generatbutton =document.querySelector(".generate")
 const recepiDetailcontent = document.querySelector(".recipe-details-content");
 const mealDetailcontent = document.querySelector(".meal-details");
 const searchResult = document.querySelector("showResult");
-const divresult = document.querySelector(".divResult");
+
+
 
 document.addEventListener('DOMContentLoaded', () => {showHomepage()})
 
@@ -32,13 +33,12 @@ const recipcontainer = document.querySelector(".recepi-container")
 const URL = "https://www.themealdb.com/api/json/v1/1/random.php"
 
 const getFacts = async()=>{
-  //console.log("getting data...");
+  
   let response = await fetch(URL);
   //console.log(response);
   let data = await response.json();
   console.log (data);
-   //const cocktail = data.meals.at(0)
-   //data.meals[0]
+  
    data.meals.forEach( element => {
     const mealdiv = document.createElement('div');
     mealdiv.classList.add('card');
@@ -53,7 +53,7 @@ const getFacts = async()=>{
  
   }
 )};
-getFacts();// romdomly selects meal
+getFacts();// randomly selects meal
 
 generatbutton.addEventListener('click', (event)=>{
      event.preventDefault();
@@ -73,7 +73,10 @@ console.log(resp);
 let details = await resp.json();
 console.log (details)
 searchbox.value= "";
-//searchPage.innerHTML="";
+document.querySelector(".attachMealnamediv").innerHTML="";
+
+
+
 
 
 details.meals.forEach( element => {
@@ -86,6 +89,8 @@ details.meals.forEach( element => {
   
   `
   
+  document.querySelector(".attachMealnamediv").appendChild(mealnamediv);
+
   const buttonn = document. createElement('button');
 buttonn.classList.add('detail-buttonn');
 buttonn.textContent='View details';
@@ -94,17 +99,24 @@ buttonn.textContent='View details';
     openRecepi(element);
    
 });
-searchPage.appendChild(mealnamediv);
 
- 
+
+
+})
+}
+
+searchbutton.addEventListener('click', function(event){
+  event.preventDefault();
+  let inputValue = (searchbox.value) ;
+  if (inputValue ==""){
+    
+   alert ("*Inter search value.");
+   
+  }else{
+  getName(inputValue);
+  } 
 });
-
-  }
-
-  function maprawMealdata(element){
-    console.log(element);
   
-  }
 // geting meal data
 const mapRawmealData =( element )=>{
   console.log(element);
@@ -122,6 +134,8 @@ const mapRawmealData =( element )=>{
   }
   return ingredientsDetails;
     }
+
+   
   // display on detailpage
   const openRecepi =(element) =>{
   recepiDetailcontent.innerHTML = `
@@ -140,15 +154,4 @@ const mapRawmealData =( element )=>{
 
 }
 
-searchbutton.addEventListener('click', function(event){
-  event.preventDefault();
-  let inputValue = (searchbox.value) ;
-  if (inputValue ==""){
-    
-   alert ("*Inter search value.");
-   
-  }else{
-  getName(inputValue);
-  } 
-});
 

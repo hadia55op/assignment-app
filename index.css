@@ -34,38 +34,33 @@
       border-radius: 7px;
       display: block;
     }
-    #searchResults{
-      
-      
-
-      justify-content: center;
-       margin-top: 10px;
-       
-    }
-
-    #searchResults .detail-buttonn{
+   
+   
+    .attachMealnamediv .detail-buttonn{
       cursor: pointer;
         padding: 14px 20px;
         text-decoration: none;
         display: inline-block;
         border-radius: 10px;
         background-color: burlywood;
+        
 
       
     }
    
-    #searchResults .cardd{
+
+    .attachMealnamediv{
+      
+      justify-content: center;
+    }
+    .attachMealnamediv .cardd{
       width : 320px;
       height:400px;
       background-color: peru;
       text-align: center;
       margin-inline: 25px;
-      margin-top: 60px;
-      
-      
-      
+      margin-top: 24px;
     }
-    
     .cardd img{
       width: 100%;
       height: auto;
@@ -103,6 +98,7 @@
       width: 220px;
       height: 50px;
       padding-left: 5px;
+      
 
     }
     .goTosearch{

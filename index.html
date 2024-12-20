@@ -10,11 +10,13 @@
 <body>
     
     <section id="homepage">
+      <h1> ********* Welcome ********* </h1>
 
         <div class = "recepi-container">
 
-        <h1>Welcome to the Meal finder site</h1>
-        <p>Find delicious Meal here!</p>
+        <h1></h1>
+        <br>
+        <h2>Find delicious Meal here!</h2>
         <button type="button" class ="goTosearch" onclick="showSearchResults()">Go to Search</button>
         <button type = "button " ><span class="generate" id="start">click to generate</span>
         </div> 
@@ -30,16 +32,21 @@
         
         
         <div class = "recipe-details-content"></div>
-        </div>
+        
       </section>
 
-        <section id="searchResults" class="close">
-       
+      <section>
+        <div id="searchResults" class="close">
+        
+      
        <h1>Search Meal</h1>
        <input type ="text" placeholder ="Find meal items" id ="search-input">
+        
        <button type = "submit " ><span class="link" id="search-link">click to search</span> 
         <button type ="button"class = "close-detail-page" onclick="showHomepage()">close</button>
-          
+       <div class =" attachMealnamediv">
+        
+       </div>
       </section>
 
     <script src="index.js"></script>
