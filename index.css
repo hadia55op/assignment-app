@@ -34,6 +34,20 @@
       border-radius: 7px;
       display: block;
     }
+
+
+    #homepage .detail-buttonn{
+
+      cursor: pointer;
+        padding: 14px 20px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+        background-color: burlywood;
+        
+
+
+    }
    
    
     .attachMealnamediv .detail-buttonn{
@@ -117,6 +131,24 @@
       display: inline-block;
       border-radius: 10px;
       background-color: burlywood;
+
+    }
+    .detailMealnamediv{
+      justify-content: center;
+    }
+    .detailMealnamediv .card{
+      width : 320px;
+      height:350px;
+      background-color: peru;
+      text-align: center;
+      margin-inline: 25px;
+      margin-top: 24px;
+    }
+    .card img{
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+    
 
     }
     

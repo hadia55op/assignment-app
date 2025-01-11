@@ -7,6 +7,7 @@ const generatbutton =document.querySelector(".generate")
 const recepiDetailcontent = document.querySelector(".recipe-details-content");
 const mealDetailcontent = document.querySelector(".meal-details");
 const searchResult = document.querySelector("showResult");
+const mealDetailpicdiv = document.querySelector(".detailMealnamediv");
 
 
 
@@ -49,6 +50,20 @@ const getFacts = async()=>{
 
  `
  recipcontainer.replaceChild(mealdiv, recipcontainer.children[0]);
+ const buttonn = document. createElement('button');
+buttonn.classList.add('detail-buttonn');
+buttonn.textContent='View details';
+  mealdiv.appendChild(buttonn);
+  buttonn.addEventListener('click' ,() =>{
+    openRecepi(element);
+   
+});
+ 
+
+
+
+
+
  
  
   }
@@ -134,22 +149,54 @@ const mapRawmealData =( element )=>{
   }
   return ingredientsDetails;
     }
+    const mapRawmealTaggar =( element )=>{
+      console.log(element);
+        let taggarDetails =[];
+         for ( n in element){
+          const n = element[`strTags`];
+          if(n){
+          taggarDetails += `<ul>${n}</ul>`
+             } 
+           else if(!n){
+            taggarDetails += `<p> No tags for this meal</p>`
+           }
+         
+          break;
+         }
+        return taggarDetails;
+        }
+       
+          
 
    
   // display on detailpage
   const openRecepi =(element) =>{
-  recepiDetailcontent.innerHTML = `
-  <h1>Name:${element.strMeal}</h1>
-  <h2>Id:${element.idMeal}</h2>
-  <h3>Place:${element.strArea}</h3>
-  <ul>Ingredients and measures ${mapRawmealData(element)}</ul>
-  
-  <h3> Instructions:</h3>
-  <p>${element.strInstructions}</p>
-  
-   
-  `
+    
+    recepiDetailcontent.innerHTML = `
+    <h1>Name:${element.strMeal}</h1>
+    <h2>Id:${element.idMeal}</h2>
+    <h3>Place:${element.strArea}</h3>
+    <h4>Category:${element.strCategory}</h4>
+    <ul>Tags:${mapRawmealTaggar(element)}</ul>
+     
+    <ul>Ingredients and measures ${mapRawmealData(element)}</ul>
+    <h3> Instructions:</h3>
+    <p>${element.strInstructions}</p>
+    
+     
+    `
   showDetailpage(); // function  to display detailpage
+  mealDetailpicdiv.innerHTML =" ";
+
+  const mealdiv = document.createElement('div');
+  mealdiv.classList.add('card');
+  mealdiv.innerHTML =`
+<img src = "${element.strMealThumb}">
+
+
+
+`
+mealDetailpicdiv.appendChild(mealdiv);
   
 
 }
